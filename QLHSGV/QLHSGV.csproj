@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\GiaoVienDAO.cs" />
+
     <Compile Include="EF\GiaoVien.cs" />
     <Compile Include="EF\HocSinh.cs" />
     <Compile Include="EF\HSGVContext.cs" />
@@ -73,11 +73,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usr_GV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usr_GV.Designer.cs">
-      <DependentUpon>usr_GV.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -91,8 +86,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="usr_GV.resx">
-      <DependentUpon>usr_GV.cs</DependentUpon>
+
     </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="packages.config" />

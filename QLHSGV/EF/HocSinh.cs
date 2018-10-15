@@ -9,9 +9,6 @@ namespace QLHSGV.EF
     [Table("HocSinh")]
     public partial class HocSinh
     {
-       
-
-  
 
         [StringLength(50)]
         public string DiaChi { get; set; }
