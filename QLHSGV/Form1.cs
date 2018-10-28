@@ -7,10 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLHSGV._GV;
-using QLHSGV._HS;
-using QLHSGV._LH;
-using QLHSGV._TTGD;
 
 
 namespace QLHSGV
@@ -35,22 +31,22 @@ namespace QLHSGV
 
         private void b_GV_Click(object sender, EventArgs e)
         {
-            LoadUsrCtrl(usr_GV.Instance);
+            //LoadUsrCtrl(usr_GV.Instance);
         }
 
         private void b_HS_Click(object sender, EventArgs e)
         {
-            LoadUsrCtrl(usr_HS.Instance);
+            //LoadUsrCtrl(usr_HS.Instance);
         }
 
         private void b_LH_Click(object sender, EventArgs e)
         {
-            LoadUsrCtrl(usr_LH.Instance);
+           // LoadUsrCtrl(usr_LH.Instance);
         }
 
         private void b_TT_Click(object sender, EventArgs e)
         {
-            LoadUsrCtrl(usr_TTGD.Instance);
+            //LoadUsrCtrl(usr_TTGD.Instance);
         }
     }
 }

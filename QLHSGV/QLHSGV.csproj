@@ -57,10 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\GiaoVienDAO.cs" />
-    <Compile Include="DAO\LopHocDAO.cs" />
-    <Compile Include="DAO\ThongTinGiangDayDAO.cs" />
-    <Compile Include="DAO\HocSinhDAO.cs" />
     <Compile Include="EF\GiaoVien.cs" />
     <Compile Include="EF\HocSinh.cs" />
     <Compile Include="EF\HSGVContext.cs" />
@@ -82,30 +78,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usr_TTGD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usr_TTGD.Designer.cs">
-      <DependentUpon>usr_TTGD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usr_LH.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usr_LH.Designer.cs">
-      <DependentUpon>usr_LH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usr_HS.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usr_HS.Designer.cs">
-      <DependentUpon>usr_HS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usr_GV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usr_GV.Designer.cs">
-      <DependentUpon>usr_GV.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,18 +93,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="usr_TTGD.resx">
-      <DependentUpon>usr_TTGD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usr_LH.resx">
-      <DependentUpon>usr_LH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usr_HS.resx">
-      <DependentUpon>usr_HS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usr_GV.resx">
-      <DependentUpon>usr_GV.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -148,7 +108,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DAO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
