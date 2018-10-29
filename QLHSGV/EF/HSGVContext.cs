@@ -16,8 +16,6 @@ namespace QLHSGV.EF
         public virtual DbSet<HocSinh> HocSinhs { get; set; }
         public virtual DbSet<LopHoc> LopHocs { get; set; }
         public virtual DbSet<ThongTinGiangDay> ThongTinGiangDays { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
