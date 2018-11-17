@@ -17,27 +17,22 @@ namespace QLHSGV._GV
         private static usr_GV _instance;
         
 
-
-   
-        private void button2_Click(object sender, EventArgs e)
+        public static usr_GV Instance
         {
-            // sua giao vien
-            GiaoVien gv = new GiaoVien();
-            gv.MaGV = tb_MaGV.Text;
-            gv.HoTen = tb_HoTen.Text;         
-            gv.MonHoc = cb_MonHoc.Text;
-            gv.GT = cb_GT.Text;
-            gv.NgaySinh = dt_NgaySinh.Value;
-            gv.DiaChi = tb_DiaChi.Text;
-            bool edit = new GiaoVienDAO().Update(gv);
-            if (!edit) MessageBox.Show("Không tồn tại giáo viên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
+            get
             {
-                MessageBox.Show("Đã sửa", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dtg_GiaoVien.DataSource = new GiaoVienDAO().ListAll();
+                 _instance = new usr_GV();
+                return _instance;
             }
 
+            set
+            {
+                _instance = value;
+            }
         }
+
+   
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

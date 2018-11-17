@@ -16,6 +16,8 @@ namespace QLHSGV
         public Form1()
         {
             InitializeComponent();
+            panel1.Controls.Add(usr_GV.Instance);
+            usr_GV.Instance.Dock = DockStyle.Fill;
         }
     }
 }
