@@ -32,7 +32,25 @@ namespace QLHSGV._GV
         }
 
    
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // sua giao vien
+            GiaoVien gv = new GiaoVien();
+            gv.MaGV = tb_MaGV.Text;
+            gv.HoTen = tb_HoTen.Text;         
+            gv.MonHoc = cb_MonHoc.Text;
+            gv.GT = cb_GT.Text;
+            gv.NgaySinh = dt_NgaySinh.Value;
+            gv.DiaChi = tb_DiaChi.Text;
+            bool edit = new GiaoVienDAO().Update(gv);
+            if (!edit) MessageBox.Show("Không tồn tại giáo viên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Đã sửa", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dtg_GiaoVien.DataSource = new GiaoVienDAO().ListAll();
+            }
 
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

@@ -17,6 +17,24 @@ namespace QLHSGV.DAO
         }
 
 
+        public bool Update(GiaoVien hs)
+        {
+            var dbEntry = db.GiaoViens.Find(hs.MaGV);
+            if(dbEntry == null)
+            {
+                return false;
+            }
+            else
+            {
+                dbEntry.HoTen = hs.HoTen;
+                dbEntry.DiaChi = hs.DiaChi;
+                dbEntry.GT = hs.GT;
+                dbEntry.MonHoc = hs.MonHoc;
+                dbEntry.NgaySinh = hs.NgaySinh;
+            }
+            db.SaveChanges();
+            return true;
+        }
         public bool Delete(string MaHS)
         {
             var dbEntry = db.GiaoViens.Find(MaHS);

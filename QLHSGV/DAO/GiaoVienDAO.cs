@@ -32,6 +32,11 @@ namespace QLHSGV.DAO
         }using System;
         HSGVContext db = new HSGVContext();
 
+        public List<GiaoVien> ListAll()
+        {
+            return db.GiaoViens.ToList();
+        }
+
 
        
         public List<GiaoVien> Search(string key)
@@ -42,7 +47,12 @@ namespace QLHSGV.DAO
         {
             return db.GiaoViens.SingleOrDefault(x => x.MaGV == MaGV);
         }
-
+        public List<string> GetGvName()
+        {
+            var list = from q in db.GiaoViens
+                       select q.HoTen;
+            return list.ToList();
+        }
         public string GetIDbyName(string name)
         {
             var data = db.GiaoViens.SingleOrDefault(x => x.HoTen == name);
